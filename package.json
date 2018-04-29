@@ -1,0 +1,21 @@
+{
+  "name": "atelierback",
+  "version": "1.0.0",
+  "description": "NodeJS sur Heroku",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Ronald Guerrier",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongodb": "^2.2.33",
+    "nodemon": "^1.17.3",
+    "pug": "^2.0.3",
+    "socket.io": "^2.1.0"
+  }
+}

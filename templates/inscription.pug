@@ -1,0 +1,96 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		link(rel="stylesheet", href="../public/style.css")
+		title ACCEUIL
+		style.
+			main{
+			width: 50%;
+			margin: 0 auto;
+			text-align: center;
+			}
+			input{
+				float:right;
+			}
+			form{
+				width: 45%;
+				margin: 50px auto;
+			}
+			section{
+			width: 250px;
+			margin: auto;
+			}
+			#avatar1,#avatar2{
+			height: 110px;
+			width: 80px;
+			background: green;
+			position:relative;
+			margin-top: 3px;
+			margin-left: 3px;
+			top:2px;
+			background-repeat:no-repeat;
+			background-size: cover;
+			border-radius: 20px;
+			float: left;
+			text-align: center;
+			line-height: 15;
+			}
+			#avatar1{
+			background-image:url("../img/avatar1.png") ;	
+			left: 2px;
+			}
+			#avatar2{
+			background-image:url("../img/avatar2.png") ;
+			left: 2px;	
+			}
+			#avatar1:hover,#avatar2:hover{
+			transform: scale(0.8);
+			transition: 0.5s;
+			}
+			.avatar{
+			transform: scale(1.4);
+			transition: 0.5s;
+			color:red;
+			z-index: 50;
+			}
+	
+	body
+		main
+			h1 INSCRIPTION
+			p
+			form(action="/inscrit", method="post")
+				label(for="Pseudo") Pseudo: 
+				input(type="text", name="pseudo",required="required")
+				p
+				label(for="email") Email:  
+				input(type="email", name="email",required="required")
+				p
+				label(for="password") Password: 
+				input(type="password", name="password",required="required")
+				p
+				label(for="lavatar") Choix de l'avatar: 
+				input(type="number",  name="lavatar" min="1" max="2",required="required")
+				p
+				input(type="submit", value="envoyer")
+			section
+				#avatar1(onclick="auChoix('avatar1')") 1
+				#avatar2(onclick="auChoix('avatar2')") 2
+		script(type="text/javascript").
+			// var toto=document.getElementById('avatar1');
+			//   toto.addEventListener('click',function(){
+			//     toto.className='avatar';
+			//   });
+			var tobby=true
+			var tata;
+			var toto;
+			var auChoixauChoix=function(message){
+			if(tobby){
+			toto=document.getElementById(message);
+			tata=toto.innerText;
+			console.log(tata);
+			toto.className='avatar';
+			tobby=false
+			}else{ alert('deja choisi')}
+			};
+			auChoix('ok');

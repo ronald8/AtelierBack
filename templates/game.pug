@@ -1,0 +1,160 @@
+html
+	head
+		meta(charset='utf-8')
+		title Jeux Multijoueur
+		style.
+			#player1{
+			font-size: 23px;
+			width: 30%;
+			height: 100px;
+			position: relative;
+			float:left;
+			background:rgba(255,255,255,0.7);
+			white-space:nowrap;
+			}
+			#player2{
+			font-size: 23px;
+			width: 30%;
+			height: 100px;
+			position: relative;
+			float: left;
+			background:rgba(255,255,255,0.7);
+			white-space:nowrap;
+			}
+			#score{
+			font-size: 40px;
+			float: left;
+			width: 40%;
+			height: 100px;
+			float:left;
+			text-align: center;
+			background:rgba(255,255,255,0.7);
+			}
+			#result{
+			width: 200px;
+			height: 100px;
+			background:#5FB404;
+			position: absolute;
+			top:257px;
+			left: 200px;
+			border-radius: 50px;
+			text-align: center;
+			display: none;
+			font-size:20px;
+			line-height: 4em;
+			}
+			header{
+			width: 100%;
+			height: 100px;
+			}
+			table{
+			width: 600px;
+			height: 610px;
+			background: black;
+			margin : 0 auto;
+			position: relative;
+			border-radius: 20px;
+			}
+			td{
+			padding: 8px;
+			}
+			main{
+			width: 1000px;
+			height: 800px;
+			margin : 0 auto;
+			background:rgba(255,255,255,0.2);
+			border-radius: 20px;
+			}
+			body{
+			background-image:url("/img/")  ;
+			background-repeat:no-repeat;
+			background-size: cover;
+			}
+			#score1,#score2,#tiret{
+			display: inline-block;
+			}
+			#avatarPlayer1{
+			height: 200px;
+			width: 150px;
+			margin-left: -1px;
+			background: rgb(240, 219, 79);
+			position: relative;
+			/*top:100px;*/
+			border-radius:90px;
+			}
+			#avatarPlayer2{
+			height: 200px;
+			width: 150px;
+			background: rgb(240, 219, 79);
+			position: relative;
+			/*top:100px;*/
+			margin-left: 150px;
+			border-radius:90px;
+			}
+		
+		
+	body
+		main
+			header
+				#player1
+					| JOUEUR :
+					span#pseudo #{lavatar} #{pseudo}   
+					#avatarPlayer1  
+				#score
+					| SCORE :
+					#score1 0
+					span#tiret -
+					#score2 0
+				#player2
+					| ADVERSAIRE :
+					span#adversaire #{adversaire}
+					#avatarPlayer2
+			section
+				#result
+				table#cases
+					tr
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+					tr
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+					tr
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+					tr
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+						td
+							img(src='./img/javascript.png')
+				script(src='/socket.io/socket.io.js', charset='utf-8')
+				script(src='/js/script.js', charset='utf-8')
