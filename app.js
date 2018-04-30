@@ -10,7 +10,7 @@ var cookieParser = require('cookie-parser');
 /* */
 var MongoClient = require('mongodb').MongoClient;
 var myDb;
-var URL = 'mongodb://localhost:27017/game';
+var URL = 'mongodb://Ronald:01062008@ds261929.mlab.com:61929/heroku_20cn4ns7';
 
 /* Joueurs */
 var joueurs = [];
